@@ -1,0 +1,218 @@
+.projects-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.02) 50%, transparent);
+}
+
+.projects-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.04), transparent 60%);
+  pointer-events: none;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Filters */
+.projects-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.projects-filter-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  transition: all 0.25s ease;
+}
+
+.projects-filter-btn:hover {
+  color: #94a3b8;
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.projects-filter-btn.active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: var(--color-primary-light);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.project-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  animation: fadeInUp 0.5s ease both;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 1px var(--accent);
+}
+
+.project-card--featured::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--radius-md) + 1px);
+  background: linear-gradient(135deg, var(--accent) 0%, transparent 50%);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-icon {
+  font-size: 24px;
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+}
+
+.project-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  color: #64748b;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.02);
+}
+
+.project-link-btn:hover {
+  color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+.project-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-featured-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  width: fit-content;
+  letter-spacing: 0.5px;
+}
+
+.project-company-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  color: #06b6d4;
+  letter-spacing: 0.3px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e2e8f0;
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-read-more {
+  background: none;
+  border: none;
+  color: var(--color-primary-light);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.project-read-more:hover {
+  color: var(--color-secondary);
+}
+
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tech {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  color: #64748b;
+  font-family: 'Fira Code', monospace;
+}
+
+.projects-footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}

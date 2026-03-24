@@ -1,0 +1,228 @@
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.06), transparent 70%);
+  top: 50%;
+  right: -200px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* LEFT */
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-bio {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.about-bio strong { color: #94a3b8; font-weight: 600; }
+.about-bio em { color: var(--color-primary-light); font-style: normal; }
+
+.about-quick-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.about-fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-fact-icon {
+  color: var(--color-primary-light);
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.about-fact-label {
+  font-size: 12px;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.about-fact-value {
+  font-size: 14px;
+  color: #e2e8f0;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.about-fact-link {
+  text-decoration: none;
+  color: var(--color-primary-light);
+  transition: color 0.2s;
+}
+.about-fact-link:hover { color: var(--color-secondary); }
+
+/* RIGHT */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-stat {
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.about-stat-icon {
+  font-size: 22px;
+  color: var(--color-primary-light);
+  margin-bottom: 4px;
+}
+
+.about-stat-value {
+  font-size: 36px;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.about-stat-label {
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Education Card */
+.about-edu {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-edu-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-edu-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.about-edu-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.about-edu-uni {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.about-edu-details {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.about-edu-year {
+  font-size: 13px;
+  color: #475569;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.about-edu-cgpa {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-success);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Certificate */
+.about-cert {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-cert-badge { font-size: 28px; }
+
+.about-cert-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 4px;
+}
+
+.about-cert-issuer {
+  font-size: 13px;
+  color: var(--color-accent);
+}
+
+.about-cert-id {
+  font-size: 12px;
+  color: #475569;
+  font-family: 'Fira Code', monospace;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 50px; }
+}
+
+@media (max-width: 480px) {
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .about-stat { padding: 20px 14px; }
+  .about-stat-value { font-size: 28px; }
+}

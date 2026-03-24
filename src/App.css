@@ -1,0 +1,13 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Section alternating subtle backgrounds */
+#about {
+  background: linear-gradient(180deg, transparent, rgba(6, 182, 212, 0.015), transparent);
+}
+
+#experience {
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.02), transparent);
+}

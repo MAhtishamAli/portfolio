@@ -1,0 +1,236 @@
+.experience-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(99, 102, 241, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* EXP CARD */
+.exp-card {
+  padding: 36px;
+}
+
+.exp-card-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.exp-company-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exp-card-meta {
+  flex: 1;
+}
+
+.exp-role-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.exp-role {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.exp-current-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-success);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.exp-company {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin-bottom: 8px;
+}
+
+.exp-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.exp-description {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.exp-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.exp-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.exp-bullet {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.exp-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tech-tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: var(--color-primary-light);
+  font-family: 'Fira Code', monospace;
+}
+
+/* TIMELINE */
+.experience-timeline {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 30px 24px;
+  backdrop-filter: blur(20px);
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 28px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.4), rgba(99, 102, 241, 0.05));
+}
+
+.timeline-item {
+  display: flex;
+  gap: 18px;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-item--active .timeline-dot {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.timeline-year {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  color: var(--color-primary-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.timeline-label {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .exp-card { padding: 24px; }
+  .exp-card-header { flex-direction: column; }
+}
