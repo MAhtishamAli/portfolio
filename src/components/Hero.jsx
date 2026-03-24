@@ -205,10 +205,11 @@ export default function Hero() {
           </div>
           <div className="hero-avatar-ring hero-avatar-ring--inner" />
           <div className="hero-avatar">
-            <div className="hero-avatar-inner">
-              <span className="hero-avatar-initials">AA</span>
-              <FiSmartphone className="hero-avatar-sub-icon" />
-            </div>
+            <img
+              src="/profile.png"
+              alt="Ahtisham Ali - Software Engineer"
+              className="hero-avatar-photo"
+            />
           </div>
           <div className="hero-card hero-card--top">
             <span className="hero-card-icon">🚀</span>
